@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba2ca3afb415744934a335161413cd1f",
+    "content-hash": "676787a7cfece5ae9d049e4d1f9f405b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1524,6 +1524,72 @@
                 }
             ],
             "time": "2022-05-05T09:31:05+00:00"
+        },
+        {
+            "name": "friendsofsymfony/message-bundle",
+            "version": "dev-build/upgrade-deps",
+            "dist": {
+                "type": "path",
+                "url": "../FOSMessageBundle",
+                "reference": "59baca685a8908f2140bb49737b6b2a181d99c4c"
+            },
+            "require": {
+                "doctrine/collections": "^1.3",
+                "php": ">=7.2",
+                "symfony/form": "^5.0|^6.0",
+                "symfony/framework-bundle": "^5.0|^6.0",
+                "symfony/security-bundle": "^5.0|^6.0",
+                "symfony/twig-bundle": "^5.0|^6.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.0",
+                "symfony/browser-kit": "^5.0|^6.0",
+                "symfony/phpunit-bridge": "^6.1",
+                "symfony/security-bundle": "^5.0|^6.0",
+                "symfony/templating": "^5.0|^6.0",
+                "symfony/translation": "^5.0|^6.0",
+                "symfony/validator": "^5.0|^6.0",
+                "symfony/yaml": "^5.0|^6.0"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "dev-master",
+                "doctrine/mongodb-odm-bundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FOS\\MessageBundle\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com",
+                    "homepage": "http://ornicar.github.com"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSMessageBundle/contributors"
+                }
+            ],
+            "description": "Provides user-to-user messaging features for your Symfony application.",
+            "homepage": "https://github.com/FriendsOfSymfony/FOSMessageBundle",
+            "keywords": [
+                "message",
+                "messaging",
+                "symfony"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laminas/laminas-code",
@@ -9711,7 +9777,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsofsymfony/message-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

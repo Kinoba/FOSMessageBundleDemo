@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /messages

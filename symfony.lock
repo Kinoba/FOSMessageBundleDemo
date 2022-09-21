@@ -35,6 +35,9 @@
             "migrations/.gitignore"
         ]
     },
+    "friendsofsymfony/message-bundle": {
+        "version": "dev-master"
+    },
     "phpunit/phpunit": {
         "version": "9.5",
         "recipe": {
