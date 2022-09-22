@@ -4,9 +4,7 @@ namespace App\Form\DataTransformer;
 
 use App\Entity\User;
 
-use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -70,6 +68,6 @@ class UserToUsernameTransformer implements DataTransformerInterface
             throw new UnexpectedTypeException($value, 'string');
         }
 
-        return $this->em->getRepository(User::class)->loadUserByIdentifier($value);
+        return $this->em->getRepository(User::class)->findOneByIdentifier($value);
     }
 }

@@ -1,14 +1,17 @@
 <?php
+// src/Entity/User.php
 
 namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use FOS\MessageBundle\Model\ParticipantInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+#[ORM\Table(name: 'users')]
+class User implements UserInterface, PasswordAuthenticatedUserInterface, ParticipantInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -103,5 +106,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function __toString()
+    {
+        return $this->getUserIdentifier();
     }
 }
