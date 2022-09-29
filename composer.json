@@ -46,9 +46,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../FOSMessageBundle",
-            "option": ""
+            "type": "vcs",
+            "url": "https://github.com/Kinoba/FOSMessageBundle.git"
         }
     ],
     "config": {
